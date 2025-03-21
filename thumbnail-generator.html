@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Thumbnail Generator</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .video-container {
+            margin-bottom: 40px;
+        }
+        video {
+            width: 100%;
+            max-width: 640px;
+            margin-bottom: 10px;
+        }
+        canvas {
+            display: none;
+        }
+        button {
+            padding: 8px 16px;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Thumbnail Generator</h1>
+    <p>Load each video and click "Capture Thumbnail" to save the current frame.</p>
+
+    <div class="video-container">
+        <h3>Reel 01</h3>
+        <video id="video1" src="/src/assets/Pro Photos for Brand/Reels for Brand's Social Media/Reel 01.mp4" controls></video>
+        <button onclick="captureThumbnail('video1', 'reel-01.jpg')">Capture Thumbnail</button>
+    </div>
+
+    <div class="video-container">
+        <h3>Reel 02</h3>
+        <video id="video2" src="/src/assets/Pro Photos for Brand/Reels for Brand's Social Media/Reel 02.mp4" controls></video>
+        <button onclick="captureThumbnail('video2', 'reel-02.jpg')">Capture Thumbnail</button>
+    </div>
+
+    <div class="video-container">
+        <h3>Reel 03</h3>
+        <video id="video3" src="/src/assets/Pro Photos for Brand/Reels for Brand's Social Media/Reel 03.mp4" controls></video>
+        <button onclick="captureThumbnail('video3', 'reel-03.jpg')">Capture Thumbnail</button>
+    </div>
+
+    <div class="video-container">
+        <h3>Reel 04</h3>
+        <video id="video4" src="/src/assets/Pro Photos for Brand/Reels for Brand's Social Media/Reel 04.mp4" controls></video>
+        <button onclick="captureThumbnail('video4', 'reel-04.jpg')">Capture Thumbnail</button>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script>
+        function captureThumbnail(videoId, filename) {
+            const video = document.getElementById(videoId);
+            const canvas = document.getElementById('canvas');
+            const context = canvas.getContext('2d');
+
+            // Set canvas size to match video dimensions
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            // Draw the current video frame
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // Convert to jpg and download
+            canvas.toBlob((blob) => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 'image/jpeg', 0.95);
+        }
+    </script>
+</body>
+</html> 
