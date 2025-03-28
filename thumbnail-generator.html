@@ -39,32 +39,44 @@
 
     <div class="video-container">
         <h3>Reel 01</h3>
-        <video id="video1" src="/src/assets/Pro Photos for Brand/Reels for Brand's Social Media/Reel 01.mp4" controls></video>
+        <video id="video1" controls></video>
         <button onclick="captureThumbnail('video1', 'reel-01.jpg')">Capture Thumbnail</button>
     </div>
 
     <div class="video-container">
         <h3>Reel 02</h3>
-        <video id="video2" src="/src/assets/Pro Photos for Brand/Reels for Brand's Social Media/Reel 02.mp4" controls></video>
+        <video id="video2" controls></video>
         <button onclick="captureThumbnail('video2', 'reel-02.jpg')">Capture Thumbnail</button>
     </div>
 
     <div class="video-container">
         <h3>Reel 03</h3>
-        <video id="video3" src="/src/assets/Pro Photos for Brand/Reels for Brand's Social Media/Reel 03.mp4" controls></video>
+        <video id="video3" controls></video>
         <button onclick="captureThumbnail('video3', 'reel-03.jpg')">Capture Thumbnail</button>
     </div>
 
     <div class="video-container">
         <h3>Reel 04</h3>
-        <video id="video4" src="/src/assets/Pro Photos for Brand/Reels for Brand's Social Media/Reel 04.mp4" controls></video>
+        <video id="video4" controls></video>
         <button onclick="captureThumbnail('video4', 'reel-04.jpg')">Capture Thumbnail</button>
     </div>
 
     <canvas id="canvas"></canvas>
 
-    <script>
-        function captureThumbnail(videoId, filename) {
+    <script type="module">
+        // Import videos using Vite's URL import
+        import reel01URL from './src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 01.mp4';
+        import reel02URL from './src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 02.mp4';
+        import reel03URL from './src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 03.mp4';
+        import reel04URL from './src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 04.mp4';
+
+        // Set video sources
+        document.getElementById('video1').src = reel01URL;
+        document.getElementById('video2').src = reel02URL;
+        document.getElementById('video3').src = reel03URL;
+        document.getElementById('video4').src = reel04URL;
+
+        window.captureThumbnail = function(videoId, filename) {
             const video = document.getElementById(videoId);
             const canvas = document.getElementById('canvas');
             const context = canvas.getContext('2d');
@@ -87,7 +99,7 @@
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
             }, 'image/jpeg', 0.95);
-        }
+        };
     </script>
 </body>
 </html> 

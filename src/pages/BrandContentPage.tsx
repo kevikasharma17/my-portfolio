@@ -2,34 +2,38 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Download, Video, ArrowLeft, Play, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const BrandContentPage = () => {
-  const videos = [
-    { id: 1, title: 'Reel 01', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 01.mp4' },
-    { id: 2, title: 'Reel 02', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 02.mp4' },
-    { id: 3, title: 'Reel 03', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 03.mp4' },
-    { id: 4, title: 'Reel 04', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 04.mp4' },
-    { id: 7, title: 'Reel 07', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 07.mp4' },
-    { id: 9, title: 'Reel 09', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 09.mp4' },
-    { id: 10, title: 'Reel 10', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 10.MP4' },
-    { id: 11, title: 'Reel 11', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 11.mp4' },
-    { id: 12, title: 'Reel 12', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 12.mp4' },
-    { id: 13, title: 'Reel 13', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 13.MP4' },
-    { id: 23, title: 'Reel 23.1', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 23.1.MP4' },
-  ];
+// Import brand photos PDF using Vite's asset handling
+const brandPhotosPdf = new URL('../assets/Professional Brand Photos Edits.pdf', import.meta.url).href;
 
+// Import video assets using Vite's asset handling
+const videoAssets = [
+  { id: 1, title: 'Reel 01', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 01.mp4', import.meta.url).href },
+  { id: 2, title: 'Reel 02', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 02.mp4', import.meta.url).href },
+  { id: 3, title: 'Reel 03', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 03.mp4', import.meta.url).href },
+  { id: 4, title: 'Reel 04', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 04.mp4', import.meta.url).href },
+  { id: 7, title: 'Reel 07', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 07.mp4', import.meta.url).href },
+  { id: 9, title: 'Reel 09', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 09.mp4', import.meta.url).href },
+  { id: 10, title: 'Reel 10', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 10.MP4', import.meta.url).href },
+  { id: 11, title: 'Reel 11', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 11.mp4', import.meta.url).href },
+  { id: 12, title: 'Reel 12', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 12.mp4', import.meta.url).href },
+  { id: 13, title: 'Reel 13', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 13.MP4', import.meta.url).href },
+  { id: 23, title: 'Reel 23.1', url: new URL('../assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 23.1.MP4', import.meta.url).href },
+];
+
+const BrandContentPage = () => {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const modalVideoRef = useRef<HTMLVideoElement | null>(null);
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState<{ id: number; title: string; url: string } | null>(null);
-  const [loadedPreviews, setLoadedPreviews] = useState<boolean[]>(new Array(videos.length).fill(false));
+  const [loadedPreviews, setLoadedPreviews] = useState<boolean[]>(new Array(videoAssets.length).fill(false));
 
   useEffect(() => {
     // Initialize video refs array
-    videoRefs.current = videoRefs.current.slice(0, videos.length);
+    videoRefs.current = videoRefs.current.slice(0, videoAssets.length);
 
     // Load first frame for first 4 videos
-    videos.slice(0, 4).forEach((_, index) => {
+    videoAssets.slice(0, 4).forEach((_, index) => {
       const video = videoRefs.current[index];
       if (video) {
         video.currentTime = 0.1;
@@ -54,10 +58,10 @@ const BrandContentPage = () => {
 
     window.addEventListener('keydown', handleEscKey);
     return () => window.removeEventListener('keydown', handleEscKey);
-  }, [videos.length, modalOpen]);
+  }, [videoAssets.length, modalOpen]);
 
   const handleVideoClick = (index: number) => {
-    setSelectedVideo(videos[index]);
+    setSelectedVideo(videoAssets[index]);
     setModalOpen(true);
   };
 
@@ -92,14 +96,14 @@ const BrandContentPage = () => {
               <h2 className="text-2xl font-medium text-stone-800 mb-6">Professional Brand Photos Edits</h2>
               <div className="w-full max-w-4xl mx-auto bg-stone-50 rounded-lg overflow-hidden" style={{ height: '800px' }}>
                 <iframe
-                  src="/public/assets/Professional Brand Photos Edits.pdf"
+                  src={brandPhotosPdf}
                   className="w-full h-full"
                   title="Professional Brand Photos Edits"
                 />
               </div>
               <div className="mt-6 flex justify-center">
                 <a
-                  href="/public/assets/Professional Brand Photos Edits.pdf"
+                  href={brandPhotosPdf}
                   download="Professional Brand Photos Edits.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-stone-800 text-white rounded-lg hover:bg-stone-700 transition-colors"
                 >
@@ -115,7 +119,7 @@ const BrandContentPage = () => {
         <div>
           <h2 className="text-2xl font-medium text-stone-800 mb-8 text-center">Brand's Reels for Social Media</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {videos.map((video, index) => (
+            {videoAssets.map((video, index) => (
               <div key={video.id} className="bg-white rounded-lg shadow-lg overflow-hidden group">
                 <div className="relative aspect-video cursor-pointer" onClick={() => handleVideoClick(index)}>
                   <video

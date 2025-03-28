@@ -2,6 +2,12 @@ import React from 'react';
 import { Download, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// Import all PDF assets using Vite's asset handling
+const tesuCampaignPdf = new URL('../assets/marketing-campaigns/Tesu Marketing Campaign.pdf', import.meta.url).href;
+const tesuConceptPdf = new URL('../assets/marketing-campaigns/Tesu_X_SMC_Concept_Note_new.pdf', import.meta.url).href;
+const tesuNewsletterPdf = new URL('../assets/marketing-campaigns/Newsletter_TESU.pdf', import.meta.url).href;
+const taruvaBrandPdf = new URL('../assets/marketing-campaigns/Deciding Color Palate and Fonts.pdf', import.meta.url).href;
+
 const MarketingCampaignsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-50 via-white to-stone-50 py-20">
@@ -37,7 +43,7 @@ const MarketingCampaignsPage = () => {
               <p className="text-stone-600 mb-6">Comprehensive marketing campaign strategy for Tesu, including brand positioning, logo design, target audience analysis, and promotional planning.</p>
               <div className="flex flex-col space-y-3">
                 <a
-                  href="/public/assets/marketing-campaigns/Tesu Marketing Campaign.pdf"
+                  href={tesuCampaignPdf}
                   download="Tesu Marketing Campaign.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                 >
@@ -45,7 +51,7 @@ const MarketingCampaignsPage = () => {
                   Download Campaign Strategy
                 </a>
                 <a
-                  href="/public/assets/marketing-campaigns/Tesu_X_SMC_Concept_Note_new.pdf"
+                  href={tesuConceptPdf}
                   download="Tesu X SMC - Concept Note.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                 >
@@ -53,7 +59,7 @@ const MarketingCampaignsPage = () => {
                   Download Concept Note
                 </a>
                 <a
-                  href="/public/assets/marketing-campaigns/Newsletter_TESU.pdf"
+                  href={tesuNewsletterPdf}
                   download="Newsletter_TESU.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                 >
@@ -81,7 +87,7 @@ const MarketingCampaignsPage = () => {
               <h2 className="text-2xl font-medium text-stone-800 mb-4">Brand Identity Guidelines</h2>
               <p className="text-stone-600 mb-6">Comprehensive brand identity guide for Taruvaa, encompassing color palette selection, typography hierarchy, and visual design elements to establish a cohesive and professional brand presence.</p>
               <a
-                href="/public/assets/marketing-campaigns/Deciding Color Palate and Fonts.pdf"
+                href={taruvaBrandPdf}
                 download="Taruvaa Brand Identity Guide.pdf"
                 className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
               >

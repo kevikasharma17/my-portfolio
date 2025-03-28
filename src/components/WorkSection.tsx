@@ -4,6 +4,19 @@ import { Project } from '../types/project';
 import { Download, Video } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// Import all PDF and media assets using Vite's asset handling
+const photoEditsPdf = new URL('../assets/iphone-edits/Photo Edits.pdf', import.meta.url).href;
+const nysidPortfolioPdf = new URL('../assets/iphone-edits/NYSID Accepted Portfolio.pdf', import.meta.url).href;
+const marketingInsightsPdf = new URL('../assets/iphone-edits/10 Effective Ways to Support and Boost Visibility for Local Small Businesses (3).pdf', import.meta.url).href;
+
+// Purdue project assets
+const unitedWayPlanPdf = new URL('../assets/Purdue Projects Section/Purdue Projects/United Way Brand Plan.pdf', import.meta.url).href;
+const unitedWayPromoVideo = new URL('../assets/Purdue Projects Section/Purdue Projects/AI generated Promotional Video for UnitedWay.mp4', import.meta.url).href;
+const rubeGoldbergPdf = new URL('../assets/Purdue Projects Section/Purdue Projects/RubeGoldberg Chatbot Guidebook (2).pdf', import.meta.url).href;
+const humanLibraryPdf = new URL('../assets/Purdue Projects Section/Purdue Projects/Human Library at Chicago Airport Idea Proposal.pdf', import.meta.url).href;
+const disneyPdf = new URL('../assets/Purdue Projects Section/Purdue Projects/Disney Brand News.pptx.pdf', import.meta.url).href;
+const amazonPrimePdf = new URL('../assets/Purdue Projects Section/Purdue Projects/Amazon Prime Pricing.pdf', import.meta.url).href;
+
 const ProjectGrid = ({ items }: { items: Project[] }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {items.map((project) => (
@@ -34,7 +47,7 @@ const ProjectGrid = ({ items }: { items: Project[] }) => (
             {project.id === 'photography-series' && (
               <div className="mt-4 flex justify-center">
                 <a
-                  href="/public/assets/iphone-edits/Photo Edits.pdf"
+                  href={photoEditsPdf}
                   download="iPhone Pro Edits Portfolio.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                   onClick={(e) => e.stopPropagation()}
@@ -47,7 +60,7 @@ const ProjectGrid = ({ items }: { items: Project[] }) => (
             {project.id === 'digital-art' && (
               <div className="mt-4 flex justify-center">
                 <a
-                  href="/public/assets/iphone-edits/NYSID Accepted Portfolio.pdf"
+                  href={nysidPortfolioPdf}
                   download="Digital Art Portfolio.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                   onClick={(e) => e.stopPropagation()}
@@ -60,7 +73,7 @@ const ProjectGrid = ({ items }: { items: Project[] }) => (
             {project.id === 'marketing-blog' && (
               <div className="mt-4 flex justify-center">
                 <a
-                  href="/public/assets/iphone-edits/10 Effective Ways to Support and Boost Visibility for Local Small Businesses (3).pdf"
+                  href={marketingInsightsPdf}
                   download="Marketing Insights.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                   onClick={(e) => e.stopPropagation()}
@@ -183,7 +196,7 @@ const WorkSection = () => {
                                 <h4 className="text-lg font-medium mb-2">United Way Brand Plan & AI Promo</h4>
                                 <div className="flex items-center gap-4">
                                   <a
-                                    href="/src/assets/Purdue Projects Section/Purdue Projects/United Way Brand Plan.pdf"
+                                    href={unitedWayPlanPdf}
                                     download="United Way Brand Plan.pdf"
                                     className="flex items-center text-sm hover:text-stone-200 transition-colors"
                                     onClick={(e) => e.stopPropagation()}
@@ -192,7 +205,7 @@ const WorkSection = () => {
                                     Brand Plan
                                   </a>
                                   <a
-                                    href="/src/assets/Purdue Projects Section/Purdue Projects/AI generated Promotional Video for UnitedWay.mp4"
+                                    href={unitedWayPromoVideo}
                                     download="UnitedWay_Promo.mp4"
                                     className="flex items-center text-sm hover:text-stone-200 transition-colors"
                                     onClick={(e) => e.stopPropagation()}
@@ -207,7 +220,7 @@ const WorkSection = () => {
                               <div className="mb-4">
                                 <h4 className="text-lg font-medium mb-2">RubeGoldberg Chatbot</h4>
                                 <a
-                                  href="/src/assets/Purdue Projects Section/Purdue Projects/RubeGoldberg Chatbot Guidebook (2).pdf"
+                                  href={rubeGoldbergPdf}
                                   download="RubeGoldberg Chatbot Guidebook.pdf"
                                   className="flex items-center text-sm hover:text-stone-200 transition-colors"
                                   onClick={(e) => e.stopPropagation()}
@@ -221,7 +234,7 @@ const WorkSection = () => {
                               <div className="mb-4">
                                 <h4 className="text-lg font-medium mb-2">Human Library - Chicago Airport</h4>
                                 <a
-                                  href="/src/assets/Purdue Projects Section/Purdue Projects/Human Library at Chicago Airport Idea Proposal.pdf"
+                                  href={humanLibraryPdf}
                                   download="Human Library Proposal.pdf"
                                   className="flex items-center text-sm hover:text-stone-200 transition-colors"
                                   onClick={(e) => e.stopPropagation()}
@@ -235,7 +248,7 @@ const WorkSection = () => {
                               <div className="mb-4">
                                 <h4 className="text-lg font-medium mb-2">Disney Brand Analysis</h4>
                                 <a
-                                  href="/src/assets/Purdue Projects Section/Purdue Projects/Disney Brand News.pptx.pdf"
+                                  href={disneyPdf}
                                   download="Disney Brand Analysis.pdf"
                                   className="flex items-center text-sm hover:text-stone-200 transition-colors"
                                   onClick={(e) => e.stopPropagation()}
@@ -249,13 +262,13 @@ const WorkSection = () => {
                               <div className="mb-4">
                                 <h4 className="text-lg font-medium mb-2">Amazon Prime Pricing</h4>
                                 <a
-                                  href="/src/assets/Purdue Projects Section/Purdue Projects/Amazon Prime Pricing.pdf"
-                                  download="Amazon Prime Pricing Analysis.pdf"
+                                  href={amazonPrimePdf}
+                                  download="Amazon Prime Pricing.pdf"
                                   className="flex items-center text-sm hover:text-stone-200 transition-colors"
                                   onClick={(e) => e.stopPropagation()}
                                 >
                                   <Download className="w-4 h-4 mr-2" />
-                                  Pricing Analysis
+                                  Amazon Prime Study
                                 </a>
                               </div>
                             </div>
