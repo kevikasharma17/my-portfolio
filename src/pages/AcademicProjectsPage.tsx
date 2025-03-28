@@ -3,13 +3,13 @@ import { Download, Video, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import PDF files
-import DisneyBrandPDF from '../assets/Purdue Projects Section/Purdue Projects/Disney Brand News.pptx.pdf';
-import AmazonPrimePDF from '../assets/Purdue Projects Section/Purdue Projects/Amazon Prime Pricing.pdf';
-import UnitedWayPDF from '../assets/Purdue Projects Section/Purdue Projects/A-Z Plan.pdf';
-import UnitedWayRevampPDF from '../assets/Purdue Projects Section/Purdue Projects/Brand Revamp Plan_compressed_ilovpdf.pdf';
+import DisneyBrandPDF from '/public/assets/Purdue Projects Section/Purdue Projects/Disney Brand News.pptx.pdf';
+import AmazonPrimePDF from '/public/assets/Purdue Projects Section/Purdue Projects/Amazon Prime Pricing.pdf';
+import UnitedWayPDF from '/public/assets/Purdue Projects Section/Purdue Projects/A-Z Plan.pdf';
+import UnitedWayRevampPDF from '/public/assets/Purdue Projects Section/Purdue Projects/Brand Revamp Plan_compressed_ilovpdf.pdf';
 // import UnitedWayVideo from '../assets/Purdue Projects Section/Purdue Projects/AI generated Promotional Video for UnitedWay.mp4';
-import RubeGoldbergPDF from '../assets/Purdue Projects Section/Purdue Projects/RubeGoldberg Chatbot Guidebook (2).pdf';
-import HumanLibraryPDF from '../assets/Purdue Projects Section/Purdue Projects/Human Library at Chicago Airport Idea Proposal.pdf';
+import RubeGoldbergPDF from '/public/assets/Purdue Projects Section/Purdue Projects/RubeGoldberg Chatbot Guidebook (2).pdf';
+import HumanLibraryPDF from '/public/assets/Purdue Projects Section/Purdue Projects/Human Library at Chicago Airport Idea Proposal.pdf';
 
 const AcademicProjectsPage = () => {
   return (

@@ -92,14 +92,14 @@ const BrandContentPage = () => {
               <h2 className="text-2xl font-medium text-stone-800 mb-6">Professional Brand Photos Edits</h2>
               <div className="w-full max-w-4xl mx-auto bg-stone-50 rounded-lg overflow-hidden" style={{ height: '800px' }}>
                 <iframe
-                  src="/src/assets/Professional Brand Photos Edits.pdf"
+                  src="/public/assets/Professional Brand Photos Edits.pdf"
                   className="w-full h-full"
                   title="Professional Brand Photos Edits"
                 />
               </div>
               <div className="mt-6 flex justify-center">
                 <a
-                  href="/src/assets/Professional Brand Photos Edits.pdf"
+                  href="/public/assets/Professional Brand Photos Edits.pdf"
                   download="Professional Brand Photos Edits.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-stone-800 text-white rounded-lg hover:bg-stone-700 transition-colors"
                 >

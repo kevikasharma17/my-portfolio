@@ -1,6 +1,6 @@
 import React from 'react';
 
-const headshot = new URL('../assets/img/Headshot.jpeg', import.meta.url).href;
+const headshot = new URL('../assets/img/Kev2.JPG', import.meta.url).href;
 
 const AboutSection = () => {
   return (
@@ -23,13 +23,13 @@ const AboutSection = () => {
             </div>
             <div className="md:w-1/2 space-y-6">
               <p className="text-lg text-stone-700 leading-relaxed">
-                With a passion for storytelling and a strategic mindset, I've dedicated my career to creating marketing campaigns that don't just reach audiences – they resonate with them. My journey in product marketing has taught me that the most powerful campaigns are built on a foundation of empathy, creativity, and data-driven insights.
+              With a passion for storytelling and a strategic mindset, I've dedicated my career to crafting marketing and product strategies that don’t just reach audiences—they resonate with them. My journey across product marketing, data analytics, and brand strategy has reinforced that the most impactful campaigns are built at the intersection of empathy, creativity, and data-driven insights.
               </p>
               <blockquote className="border-l-4 border-stone-400 pl-4 italic text-stone-600">
-                "Marketing is no longer about the stuff that you make, but about the stories you tell." - Seth Godin
+              "Design is not just what it looks like and feels like. Design is how it works." - Steve Jobs
               </blockquote>
               <p className="text-lg text-stone-700 leading-relaxed">
-                I believe in the power of authentic storytelling and strategic thinking to create meaningful connections between brands and their audiences. Every project is an opportunity to craft a unique narrative that drives engagement and delivers measurable results.
+              I believe in the power of authentic storytelling, strategic problem-solving, and analytical precision to create meaningful connections between brands and their audiences. Every project is an opportunity to craft a compelling narrative, optimize user experiences, and drive measurable business impact.
               </p>
               <div className="pt-4">
                 <h3 className="text-xl font-semibold text-stone-800 mb-3">Core Strengths</h3>

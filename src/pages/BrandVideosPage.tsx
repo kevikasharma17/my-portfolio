@@ -3,17 +3,17 @@ import { Play } from 'lucide-react';
 
 const BrandVideosPage = () => {
   const videos = [
-    { id: 1, title: 'Reel 01', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 01.mp4' },
-    { id: 2, title: 'Reel 02', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 02.mp4' },
-    { id: 3, title: 'Reel 03', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 03.mp4' },
-    { id: 4, title: 'Reel 04', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 04.mp4' },
-    { id: 7, title: 'Reel 07', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 07.mp4' },
-    { id: 9, title: 'Reel 09', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 09.mp4' },
-    { id: 10, title: 'Reel 10', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 10.MP4' },
-    { id: 11, title: 'Reel 11', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 11.mp4' },
-    { id: 12, title: 'Reel 12', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/Reel 12.mp4' },
-    { id: 13, title: 'Reel 13', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 13.MP4' },
-    { id: 23, title: 'Reel 23.1', url: '/src/assets/Pro Photos for Brand/Reels for Brand\'s Social Media/reel 23.1.MP4' },
+    { id: 1, title: 'Reel 01', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/Reel 01.mp4' },
+    { id: 2, title: 'Reel 02', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/Reel 02.mp4' },
+    { id: 3, title: 'Reel 03', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/Reel 03.mp4' },
+    { id: 4, title: 'Reel 04', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/Reel 04.mp4' },
+    { id: 7, title: 'Reel 07', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/reel 07.mp4' },
+    { id: 9, title: 'Reel 09', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/Reel 09.mp4' },
+    { id: 10, title: 'Reel 10', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/reel 10.MP4' },
+    { id: 11, title: 'Reel 11', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/Reel 11.mp4' },
+    { id: 12, title: 'Reel 12', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/Reel 12.mp4' },
+    { id: 13, title: 'Reel 13', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/reel 13.MP4' },
+    { id: 23, title: 'Reel 23.1', url: '/public/assets/Pro Photos for Brand/Reels for Brands Social Media/reel 23.1.MP4' },
   ];
 
   return (

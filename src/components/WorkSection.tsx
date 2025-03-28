@@ -34,7 +34,7 @@ const ProjectGrid = ({ items }: { items: Project[] }) => (
             {project.id === 'photography-series' && (
               <div className="mt-4 flex justify-center">
                 <a
-                  href="/assets/iphone-edits/Iphone edits 2.pdf"
+                  href="/public/assets/iphone-edits/Photo Edits.pdf"
                   download="iPhone Pro Edits Portfolio.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                   onClick={(e) => e.stopPropagation()}
@@ -47,7 +47,7 @@ const ProjectGrid = ({ items }: { items: Project[] }) => (
             {project.id === 'digital-art' && (
               <div className="mt-4 flex justify-center">
                 <a
-                  href="public/assets/iphone-edits/NYSID Accepted Portfolio copy.pdf"
+                  href="/public/assets/iphone-edits/NYSID Accepted Portfolio.pdf"
                   download="Digital Art Portfolio.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                   onClick={(e) => e.stopPropagation()}
@@ -60,7 +60,7 @@ const ProjectGrid = ({ items }: { items: Project[] }) => (
             {project.id === 'marketing-blog' && (
               <div className="mt-4 flex justify-center">
                 <a
-                  href="public/assets/iphone-edits/10 Effective Ways to Support and Boost Visibility for Local Small Businesses (3).pdf"
+                  href="/public/assets/iphone-edits/10 Effective Ways to Support and Boost Visibility for Local Small Businesses (3).pdf"
                   download="Marketing Insights.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                   onClick={(e) => e.stopPropagation()}

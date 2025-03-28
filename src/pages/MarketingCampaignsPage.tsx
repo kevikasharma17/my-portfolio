@@ -37,7 +37,7 @@ const MarketingCampaignsPage = () => {
               <p className="text-stone-600 mb-6">Comprehensive marketing campaign strategy for Tesu, including brand positioning, logo design, target audience analysis, and promotional planning.</p>
               <div className="flex flex-col space-y-3">
                 <a
-                  href="/src/assets/Marketing Campaigns/Marketing Campaigns/Tesu Marketing Campaign.pdf"
+                  href="/public/assets/marketing-campaigns/Tesu Marketing Campaign.pdf"
                   download="Tesu Marketing Campaign.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                 >
@@ -45,15 +45,15 @@ const MarketingCampaignsPage = () => {
                   Download Campaign Strategy
                 </a>
                 <a
-                  href="/src/assets/Marketing Campaigns/Marketing Campaigns/Tesu X SMC - Concept Note.pptx"
-                  download="Tesu X SMC - Concept Note.pptx"
+                  href="/public/assets/marketing-campaigns/Tesu_X_SMC_Concept_Note_new.pdf"
+                  download="Tesu X SMC - Concept Note.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                 >
                   <Download className="w-5 h-5 mr-2" />
                   Download Concept Note
                 </a>
                 <a
-                  href="/src/assets/Marketing Campaigns/Marketing Campaigns/Newsletter_ TESU.pdf"
+                  href="/public/assets/marketing-campaigns/Newsletter_TESU.pdf"
                   download="Newsletter_TESU.pdf"
                   className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
                 >
@@ -81,7 +81,7 @@ const MarketingCampaignsPage = () => {
               <h2 className="text-2xl font-medium text-stone-800 mb-4">Brand Identity Guidelines</h2>
               <p className="text-stone-600 mb-6">Comprehensive brand identity guide for Taruvaa, encompassing color palette selection, typography hierarchy, and visual design elements to establish a cohesive and professional brand presence.</p>
               <a
-                href="/src/assets/Marketing Campaigns/Marketing Campaigns/Deciding Color Palate and Fonts.pdf"
+                href="/public/assets/marketing-campaigns/Deciding Color Palate and Fonts.pdf"
                 download="Taruvaa Brand Identity Guide.pdf"
                 className="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors"
               >

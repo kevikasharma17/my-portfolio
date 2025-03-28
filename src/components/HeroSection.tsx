@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronDown, Download } from 'lucide-react';
-const heroImage = new URL('../assets/img/Kev2.JPG', import.meta.url).href;
+const heroImage = new URL('../assets/img/Headshot.jpeg', import.meta.url).href;
 
 const HeroSection = () => {
   return (
@@ -20,7 +20,7 @@ I blend technology, design, and strategy to shape compelling narratives and prod
           </p>
           <div className="pt-4">
             <a
-              href="src/assets/docs/resumes/Resume Kevika_S_PMM.pdf"
+              href="/public/assets/docs/resumes/Resume_Kevika_S_PMM.pdf"
               download="Kevika_Sharma_Resume.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 bg-stone-800 text-white rounded-lg hover:bg-stone-900 transition-colors duration-300"
             >
