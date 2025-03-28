@@ -31,13 +31,19 @@ I blend technology, design, and strategy to shape compelling narratives and prod
           </div>
         </div>
         <div className="md:w-1/2 mt-8 md:mt-0">
-          <div className="relative w-full aspect-[3/4] max-w-md mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-br from-stone-200 to-stone-100 rounded-lg transform rotate-6"></div>
-            <img
-              src={heroImage}
-              alt="Kevika Sharma"
-              className="relative rounded-lg shadow-2xl object-cover transition-all duration-500 hover:transform hover:scale-105"
-            />
+          <div className="relative w-full max-w-md mx-auto">
+            {/* Card background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-stone-200 to-stone-100 rounded-lg transform rotate-6 shadow-md"></div>
+            
+            {/* Card content */}
+            <div className="relative overflow-hidden rounded-lg shadow-2xl">
+              <img
+                src={heroImage}
+                alt="Kevika Sharma"
+                className="w-full h-auto object-cover transition-all duration-500 hover:scale-105"
+                style={{ aspectRatio: '3/4' }}
+              />
+            </div>
           </div>
         </div>
       </div>
